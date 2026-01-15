@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 
 const contactInfo = [
@@ -93,16 +94,42 @@ const Contacto = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      // Send data to Google Sheets via edge function
+      const { data, error } = await supabase.functions.invoke("send-to-sheets", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+          timestamp: new Date().toLocaleString("es-MX", { timeZone: "America/Cancun" }),
+        },
+      });
 
-    toast({
-      title: "¡Mensaje enviado!",
-      description: "Nos pondremos en contacto contigo pronto.",
-    });
+      if (error) {
+        console.error("Error sending to sheets:", error);
+        throw error;
+      }
 
-    setFormData({ name: "", email: "", phone: "", company: "", message: "" });
-    setIsSubmitting(false);
+      console.log("Form data sent successfully:", data);
+
+      toast({
+        title: "¡Mensaje enviado!",
+        description: "Nos pondremos en contacto contigo pronto.",
+      });
+
+      setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar tu mensaje. Intenta de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
