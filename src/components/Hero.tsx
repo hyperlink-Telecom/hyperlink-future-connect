@@ -167,7 +167,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="absolute -bottom-6 -left-6 bg-card-gradient border border-border rounded-xl p-4 backdrop-blur-sm"
+              className="absolute -bottom-16 -left-6 bg-card-gradient border border-border rounded-xl p-4 backdrop-blur-sm"
             >
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-lg bg-accent-gradient flex items-center justify-center">
