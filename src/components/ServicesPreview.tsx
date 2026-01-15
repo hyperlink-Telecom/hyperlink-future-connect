@@ -8,25 +8,25 @@ const services = [
     icon: Network,
     title: "Infraestructura de Red",
     description: "Diseño e implementación de redes empresariales escalables y seguras.",
-    image: "https://www.hyperlink.com.mx/images/hyper.jpg",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
   },
   {
     icon: Camera,
     title: "Videovigilancia",
     description: "Sistemas CCTV HD con monitoreo 24/7 y acceso remoto.",
-    image: "https://www.hyperlink.com.mx/images/hyper.jpg",
+    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80",
   },
   {
     icon: Settings,
     title: "Servicios Administrados",
     description: "Monitoreo, mantenimiento y optimización continua de sistemas.",
-    image: "https://www.hyperlink.com.mx/images/hyper.jpg",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
   },
   {
     icon: Wifi,
     title: "Red Inalámbrica",
     description: "Cobertura WiFi optimizada de alto rendimiento empresarial.",
-    image: "https://www.hyperlink.com.mx/images/hyper.jpg",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
   },
 ];
 
