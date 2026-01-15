@@ -6,6 +6,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import aboutTeam from "@/assets/about-team.jpg";
+import aboutBuilding from "@/assets/about-building.jpg";
 
 const timeline = [
   {
@@ -90,7 +92,7 @@ const Nosotros = () => {
               >
                 <div className="relative rounded-2xl overflow-hidden glow-effect">
                   <img
-                    src="https://www.hyperlink.com.mx/images/hyper.jpg"
+                    src={aboutTeam}
                     alt="Equipo HyperLink Telecom"
                     className="w-full h-96 object-cover"
                     loading="lazy"
@@ -279,27 +281,38 @@ const Nosotros = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="grid grid-cols-2 gap-4"
+                className="space-y-4"
               >
-                {[
-                  { icon: Award, title: "Certificados", desc: "Por los mejores fabricantes" },
-                  { icon: Users, title: "Equipo Experto", desc: "Profesionales capacitados" },
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ y: -8 }}
-                    className="p-6 rounded-2xl bg-background border border-border text-center card-hover"
-                  >
+                <div className="relative rounded-2xl overflow-hidden glow-effect">
+                  <img
+                    src={aboutBuilding}
+                    alt="Oficinas HyperLink Telecom"
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { icon: Award, title: "Certificados", desc: "Por los mejores fabricantes" },
+                    { icon: Users, title: "Equipo Experto", desc: "Profesionales capacitados" },
+                  ].map((item, index) => (
                     <motion.div
-                      whileHover={{ scale: 1.1, rotate: 10 }}
-                      className="w-14 h-14 rounded-xl bg-accent-gradient flex items-center justify-center mx-auto mb-4"
+                      key={index}
+                      whileHover={{ y: -8 }}
+                      className="p-6 rounded-2xl bg-background border border-border text-center card-hover"
                     >
-                      <item.icon className="w-7 h-7 text-primary-foreground" />
+                      <motion.div
+                        whileHover={{ scale: 1.1, rotate: 10 }}
+                        className="w-14 h-14 rounded-xl bg-accent-gradient flex items-center justify-center mx-auto mb-4"
+                      >
+                        <item.icon className="w-7 h-7 text-primary-foreground" />
+                      </motion.div>
+                      <h3 className="font-semibold mb-1">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
                     </motion.div>
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.desc}</p>
-                  </motion.div>
-                ))}
+                  ))}
+                </div>
               </motion.div>
             </div>
           </div>

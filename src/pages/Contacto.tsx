@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+import contactSupport from "@/assets/contact-support.jpg";
 
 const contactInfo = [
   {
@@ -182,6 +183,17 @@ const Contacto = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
+                {/* Support Image */}
+                <div className="relative rounded-2xl overflow-hidden glow-effect mb-8">
+                  <img
+                    src={contactSupport}
+                    alt="Equipo de soporte HyperLink Telecom"
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                </div>
+                
                 <h2 className="text-3xl font-bold mb-6">
                   Información de <span className="text-gradient">Contacto</span>
                 </h2>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Shield, Wifi, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
@@ -154,7 +155,7 @@ const Hero = () => {
           >
             <div className="relative rounded-2xl overflow-hidden glow-effect">
               <img
-                src="https://www.hyperlink.com.mx/images/hyper.jpg"
+                src={heroBackground}
                 alt="Hyperlink Telecom - Infraestructura Tecnológica"
                 className="w-full h-auto rounded-2xl"
                 loading="eager"
