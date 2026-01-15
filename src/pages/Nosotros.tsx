@@ -3,6 +3,7 @@ import { Target, Eye, Award, Users, CheckCircle, ArrowRight } from "lucide-react
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -347,6 +348,7 @@ const Nosotros = () => {
 
       <Footer />
       <WhatsAppButton />
+      <ScrollToTop />
     </div>
   );
 };
