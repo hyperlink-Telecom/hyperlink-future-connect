@@ -9,10 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-gradient-to-r from-[hsl(220,12%,10%)] to-[hsl(217,79%,51%)] text-white hover:from-[hsl(220,12%,15%)] hover:to-[hsl(217,79%,56%)] shadow-[0_4px_16px_hsl(217,79%,51%,0.3)] hover:shadow-[0_6px_24px_hsl(217,79%,51%,0.4)]",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        outline: "border border-secondary/50 bg-gradient-to-r from-[hsl(220,12%,8%)] to-[hsl(217,79%,51%,0.2)] text-white hover:from-[hsl(220,12%,12%)] hover:to-[hsl(217,79%,51%,0.4)] hover:border-secondary",
+        secondary: "bg-gradient-to-r from-[hsl(220,12%,15%)] to-[hsl(203,77%,21%)] text-white hover:from-[hsl(220,12%,20%)] hover:to-[hsl(203,77%,26%)]",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         cta: "bg-gradient-to-r from-[hsl(217,100%,56%)] to-[hsl(203,77%,35%)] text-white hover:from-[hsl(217,100%,60%)] hover:to-[hsl(203,77%,40%)] shadow-[0_4px_16px_hsl(217,100%,56%,0.4)] hover:shadow-[0_6px_24px_hsl(217,100%,56%,0.5)] hover:scale-[1.02]",
