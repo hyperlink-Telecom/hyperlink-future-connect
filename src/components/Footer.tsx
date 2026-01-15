@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Linkedin, Facebook, Instagram, Twitter } from "lucide-react";
+import logoHyperlink from "@/assets/logo-hyperlink.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,15 +18,11 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="space-y-4"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-accent-gradient flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">H</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-lg tracking-tight">HyperLink</span>
-                <span className="text-xs text-muted-foreground -mt-1">TELECOM</span>
-              </div>
-            </div>
+            <img 
+              src={logoHyperlink} 
+              alt="HyperLink Telecom" 
+              className="h-14 w-auto object-contain"
+            />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Conectando tu empresa al futuro. Soluciones integrales en telecomunicaciones, 
               seguridad e infraestructura tecnológica.
