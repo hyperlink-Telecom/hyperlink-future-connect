@@ -7,13 +7,19 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
+// Import service images
+import networkDatacenter from "@/assets/services/network-datacenter.jpg";
+import cctvSecurity from "@/assets/services/cctv-security.jpg";
+import managedServices from "@/assets/services/managed-services.jpg";
+import wirelessNetwork from "@/assets/services/wireless-network.jpg";
+
 const services = [
   {
     icon: Network,
     title: "Infraestructura de Red",
     description:
       "Diseñamos e implementamos redes empresariales robustas que garantizan conectividad continua y alta disponibilidad. Nuestras soluciones están pensadas para crecer junto con tu negocio.",
-    image: "https://www.hyperlink.com.mx/images/hyper.jpg",
+    image: networkDatacenter,
     benefits: [
       "Escalabilidad para crecimiento futuro",
       "Alta disponibilidad 99.9%",
@@ -27,7 +33,7 @@ const services = [
     title: "Infraestructura de Videovigilancia",
     description:
       "Implementamos sistemas de videovigilancia de última generación con cámaras HD, almacenamiento en la nube y acceso remoto desde cualquier dispositivo.",
-    image: "https://www.hyperlink.com.mx/images/hyper.jpg",
+    image: cctvSecurity,
     benefits: [
       "CCTV en alta definición",
       "Monitoreo 24/7",
@@ -41,7 +47,7 @@ const services = [
     title: "Servicios Administrados",
     description:
       "Nos encargamos del monitoreo, mantenimiento y optimización continua de toda tu infraestructura tecnológica para que puedas enfocarte en tu negocio.",
-    image: "https://www.hyperlink.com.mx/images/hyper.jpg",
+    image: managedServices,
     benefits: [
       "Monitoreo proactivo 24/7",
       "Mantenimiento preventivo",
@@ -55,7 +61,7 @@ const services = [
     title: "Red Inalámbrica Estructurada",
     description:
       "Diseñamos e implementamos redes WiFi empresariales con cobertura optimizada, seguridad avanzada y alto rendimiento para todos tus dispositivos.",
-    image: "https://www.hyperlink.com.mx/images/hyper.jpg",
+    image: wirelessNetwork,
     benefits: [
       "Cobertura optimizada sin puntos muertos",
       "Alto rendimiento y velocidad",
