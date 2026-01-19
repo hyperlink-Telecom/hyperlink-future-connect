@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
+import DownloadPDFButton from "@/components/DownloadPDFButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -104,10 +105,11 @@ const Servicios = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Servicios de <span className="text-gradient">Clase Mundial</span>
               </h1>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-muted-foreground mb-8">
                 Ofrecemos soluciones integrales de telecomunicaciones e infraestructura 
                 diseñadas para impulsar el crecimiento de tu empresa.
               </p>
+              <DownloadPDFButton />
             </motion.div>
           </div>
         </section>
