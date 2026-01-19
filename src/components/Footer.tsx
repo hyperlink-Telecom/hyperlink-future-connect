@@ -114,11 +114,11 @@ const Footer = () => {
             <h4 className="font-semibold text-lg">Contacto</h4>
             <div className="flex flex-col gap-4">
               <a
-                href="tel:9981503949"
+                href="tel:5656391877"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>998 150 3949</span>
+                <span>56 5639 1877</span>
               </a>
               <a
                 href="mailto:info@hyperlink.com.mx"

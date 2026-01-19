@@ -79,7 +79,7 @@ export const generateSalesPDF = () => {
 
   doc.setFontSize(10);
   doc.setTextColor(...white);
-  doc.text('Tel: 998 150 3949', 55, 235);
+  doc.text('Tel: 56 5639 1877', 55, 235);
   doc.text('Email: info@hyperlink.com.mx', 55, 248);
   doc.text('Cancun, Quintana Roo, Mexico', pageWidth - 55, 235, { align: 'right' });
   doc.text('Web: hyperlink.lovable.app', pageWidth - 55, 248, { align: 'right' });
@@ -321,7 +321,7 @@ export const generateSalesPDF = () => {
   
   doc.text('Telefono / WhatsApp:', 30, y + 18);
   doc.setFont('helvetica', 'bold');
-  doc.text('998 150 3949', 100, y + 18);
+  doc.text('56 5639 1877', 100, y + 18);
   
   doc.setFont('helvetica', 'normal');
   doc.text('Email:', 30, y + 32);

@@ -49,9 +49,9 @@ const CTA = () => {
               className="border-slate-400 text-slate-700 hover:bg-slate-200/50 hover:border-slate-500"
               asChild
             >
-              <a href="tel:9981503949">
+              <a href="tel:5656391877">
                 <Phone className="mr-2 w-5 h-5" />
-                998 150 3949
+                56 5639 1877
               </a>
             </Button>
           </div>
