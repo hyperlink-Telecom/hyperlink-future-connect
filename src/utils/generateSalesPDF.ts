@@ -31,15 +31,6 @@ export const generateSalesPDF = () => {
     return y + (lines.length * 6) + 4;
   };
 
-  const addBulletPoint = (text: string, y: number, x: number = 25) => {
-    doc.setFontSize(10);
-    doc.setTextColor(80, 80, 80);
-    doc.setFont('helvetica', 'normal');
-    doc.text('•', x - 5, y);
-    doc.text(text, x, y);
-    return y + 6;
-  };
-
   // ========== PAGE 1: Cover ==========
   // Background gradient effect
   doc.setFillColor(...darkBg);
@@ -65,7 +56,7 @@ export const generateSalesPDF = () => {
   doc.setFontSize(14);
   doc.setTextColor(...gray);
   doc.setFont('helvetica', 'normal');
-  doc.text('Infraestructura Tecnológica y Telecomunicaciones', pageWidth / 2, 130, { align: 'center' });
+  doc.text('Infraestructura Tecnologica y Telecomunicaciones', pageWidth / 2, 130, { align: 'center' });
 
   // Divider line
   doc.setDrawColor(...secondaryBlue);
@@ -76,7 +67,7 @@ export const generateSalesPDF = () => {
   doc.setFontSize(24);
   doc.setTextColor(...white);
   doc.setFont('helvetica', 'bold');
-  doc.text('Presentación de Servicios', pageWidth / 2, 170, { align: 'center' });
+  doc.text('Presentacion de Servicios', pageWidth / 2, 170, { align: 'center' });
 
   doc.setFontSize(12);
   doc.setTextColor(...gray);
@@ -88,10 +79,10 @@ export const generateSalesPDF = () => {
 
   doc.setFontSize(10);
   doc.setTextColor(...white);
-  doc.text('📞 998 150 3949', 55, 235);
-  doc.text('📧 info@hyperlink.com.mx', 55, 248);
-  doc.text('📍 Cancún, Quintana Roo, México', pageWidth - 55, 235, { align: 'right' });
-  doc.text('🌐 hyperlink.lovable.app', pageWidth - 55, 248, { align: 'right' });
+  doc.text('Tel: 998 150 3949', 55, 235);
+  doc.text('Email: info@hyperlink.com.mx', 55, 248);
+  doc.text('Cancun, Quintana Roo, Mexico', pageWidth - 55, 235, { align: 'right' });
+  doc.text('Web: hyperlink.lovable.app', pageWidth - 55, 248, { align: 'right' });
 
   // ========== PAGE 2: About Us ==========
   doc.addPage();
@@ -105,13 +96,13 @@ export const generateSalesPDF = () => {
   doc.setTextColor(...white);
   doc.setFont('helvetica', 'bold');
   doc.text('HYPERLINK TELECOM', 20, 16);
-  doc.text('Presentación de Servicios', pageWidth - 20, 16, { align: 'right' });
+  doc.text('Presentacion de Servicios', pageWidth - 20, 16, { align: 'right' });
 
   let y = 45;
-  y = addHeader('¿Quiénes Somos?', y, 22);
+  y = addHeader('Quienes Somos?', y, 22);
   
   y = addParagraph(
-    'Hyperlink Telecom es tu aliado estratégico en infraestructura tecnológica y telecomunicaciones. Ofrecemos soluciones integrales de conectividad y seguridad para empresas de todos los tamaños.',
+    'Hyperlink Telecom es tu aliado estrategico en infraestructura tecnologica y telecomunicaciones. Ofrecemos soluciones integrales de conectividad y seguridad para empresas de todos los tamanos.',
     y + 5
   );
 
@@ -124,12 +115,12 @@ export const generateSalesPDF = () => {
   doc.setFontSize(12);
   doc.setTextColor(...primaryBlue);
   doc.setFont('helvetica', 'bold');
-  doc.text('🎯 Nuestra Misión', 25, y + 12);
+  doc.text('NUESTRA MISION', 25, y + 12);
   doc.setFontSize(9);
   doc.setTextColor(80, 80, 80);
   doc.setFont('helvetica', 'normal');
   const missionText = doc.splitTextToSize(
-    'Transformar la infraestructura tecnológica mediante soluciones innovadoras que garanticen conectividad continua y seguridad robusta.',
+    'Transformar la infraestructura tecnologica mediante soluciones innovadoras que garanticen conectividad continua y seguridad robusta.',
     70
   );
   doc.text(missionText, 25, y + 22);
@@ -140,26 +131,26 @@ export const generateSalesPDF = () => {
   doc.setFontSize(12);
   doc.setTextColor(...primaryBlue);
   doc.setFont('helvetica', 'bold');
-  doc.text('🚀 Nuestra Visión', 115, y + 12);
+  doc.text('NUESTRA VISION', 115, y + 12);
   doc.setFontSize(9);
   doc.setTextColor(80, 80, 80);
   doc.setFont('helvetica', 'normal');
   const visionText = doc.splitTextToSize(
-    'Ser el aliado tecnológico de referencia, anticipándonos a las necesidades del mercado e impulsando la transformación digital.',
+    'Ser el aliado tecnologico de referencia, anticipandonos a las necesidades del mercado e impulsando la transformacion digital.',
     70
   );
   doc.text(visionText, 115, y + 22);
 
   y += 65;
-  y = addHeader('¿Por Qué Elegirnos?', y, 18);
+  y = addHeader('Por Que Elegirnos?', y, 18);
 
   const differentiators = [
-    ['👨‍💻 Equipo Certificado', 'Técnicos especializados con experiencia comprobada'],
-    ['🕐 Soporte 24/7', 'Atención en español todo el día, todos los días'],
-    ['🎯 Soluciones Personalizadas', 'Diseño a la medida de cada cliente'],
-    ['🚀 Tecnología de Punta', 'Equipamiento de última generación'],
-    ['💰 Precios Competitivos', 'Transparencia y valor por tu inversión'],
-    ['✅ Garantía de Satisfacción', 'Compromiso con resultados'],
+    ['Equipo Certificado', 'Tecnicos especializados con experiencia comprobada'],
+    ['Soporte 24/7', 'Atencion en espanol todo el dia, todos los dias'],
+    ['Soluciones Personalizadas', 'Diseno a la medida de cada cliente'],
+    ['Tecnologia de Punta', 'Equipamiento de ultima generacion'],
+    ['Precios Competitivos', 'Transparencia y valor por tu inversion'],
+    ['Garantia de Satisfaccion', 'Compromiso con resultados'],
   ];
 
   autoTable(doc, {
@@ -199,19 +190,19 @@ export const generateSalesPDF = () => {
   doc.setFontSize(14);
   doc.setTextColor(...secondaryBlue);
   doc.setFont('helvetica', 'bold');
-  doc.text('🌐 Infraestructura de Red', 25, y + 12);
+  doc.text('INFRAESTRUCTURA DE RED', 25, y + 12);
   
   doc.setFontSize(10);
   doc.setTextColor(80, 80, 80);
   doc.setFont('helvetica', 'normal');
   const netDesc = doc.splitTextToSize(
-    'Diseñamos e implementamos redes empresariales robustas con 99.9% de disponibilidad.',
+    'Disenamos e implementamos redes empresariales robustas con 99.9% de disponibilidad.',
     pageWidth - 50
   );
   doc.text(netDesc, 25, y + 22);
   
   doc.setFontSize(9);
-  doc.text('✓ Escalabilidad  ✓ Alta disponibilidad  ✓ Diseño personalizado  ✓ Soporte especializado', 25, y + 38);
+  doc.text('> Escalabilidad  > Alta disponibilidad  > Diseno personalizado  > Soporte especializado', 25, y + 38);
   
   y += 65;
 
@@ -222,19 +213,19 @@ export const generateSalesPDF = () => {
   doc.setFontSize(14);
   doc.setTextColor(...secondaryBlue);
   doc.setFont('helvetica', 'bold');
-  doc.text('📹 Infraestructura de Videovigilancia', 25, y + 12);
+  doc.text('INFRAESTRUCTURA DE VIDEOVIGILANCIA', 25, y + 12);
   
   doc.setFontSize(10);
   doc.setTextColor(80, 80, 80);
   doc.setFont('helvetica', 'normal');
   const cctvDesc = doc.splitTextToSize(
-    'Sistemas CCTV de última generación con cámaras HD y monitoreo 24/7.',
+    'Sistemas CCTV de ultima generacion con camaras HD y monitoreo 24/7.',
     pageWidth - 50
   );
   doc.text(cctvDesc, 25, y + 22);
   
   doc.setFontSize(9);
-  doc.text('✓ CCTV HD  ✓ Acceso remoto  ✓ Almacenamiento seguro  ✓ Análisis inteligente', 25, y + 38);
+  doc.text('> CCTV HD  > Acceso remoto  > Almacenamiento seguro  > Analisis inteligente', 25, y + 38);
 
   y += 65;
 
@@ -245,19 +236,19 @@ export const generateSalesPDF = () => {
   doc.setFontSize(14);
   doc.setTextColor(...secondaryBlue);
   doc.setFont('helvetica', 'bold');
-  doc.text('⚙️ Servicios Administrados', 25, y + 12);
+  doc.text('SERVICIOS ADMINISTRADOS', 25, y + 12);
   
   doc.setFontSize(10);
   doc.setTextColor(80, 80, 80);
   doc.setFont('helvetica', 'normal');
   const managedDesc = doc.splitTextToSize(
-    'Gestión integral de tu infraestructura TI con monitoreo proactivo 24/7.',
+    'Gestion integral de tu infraestructura TI con monitoreo proactivo 24/7.',
     pageWidth - 50
   );
   doc.text(managedDesc, 25, y + 22);
   
   doc.setFontSize(9);
-  doc.text('✓ Monitoreo 24/7  ✓ Mantenimiento preventivo  ✓ Reportes mensuales  ✓ Reducción de costos', 25, y + 38);
+  doc.text('> Monitoreo 24/7  > Mantenimiento preventivo  > Reportes mensuales  > Reduccion de costos', 25, y + 38);
 
   y += 65;
 
@@ -268,7 +259,7 @@ export const generateSalesPDF = () => {
   doc.setFontSize(14);
   doc.setTextColor(...secondaryBlue);
   doc.setFont('helvetica', 'bold');
-  doc.text('📶 Red Inalámbrica Estructurada', 25, y + 12);
+  doc.text('RED INALAMBRICA ESTRUCTURADA', 25, y + 12);
   
   doc.setFontSize(10);
   doc.setTextColor(80, 80, 80);
@@ -280,7 +271,7 @@ export const generateSalesPDF = () => {
   doc.text(wifiDesc, 25, y + 22);
   
   doc.setFontSize(9);
-  doc.text('✓ Cobertura total  ✓ Alto rendimiento  ✓ Seguridad WPA3  ✓ Gestión centralizada', 25, y + 38);
+  doc.text('> Cobertura total  > Alto rendimiento  > Seguridad WPA3  > Gestion centralizada', 25, y + 38);
 
   // ========== PAGE 4: Sectors & Contact ==========
   doc.addPage();
@@ -298,8 +289,8 @@ export const generateSalesPDF = () => {
   y = addHeader('Sectores que Atendemos', y, 18);
 
   const sectors = [
-    ['🏢 Corporativo', '🎓 Educación', '🛒 Retail', '🏥 Salud'],
-    ['🏭 Manufactura', '💰 Finanzas', '🏨 Hoteles', ''],
+    ['Corporativo', 'Educacion', 'Retail', 'Salud'],
+    ['Manufactura', 'Finanzas', 'Hoteles', ''],
   ];
 
   autoTable(doc, {
@@ -313,12 +304,12 @@ export const generateSalesPDF = () => {
   y = (doc as any).lastAutoTable.finalY + 20;
   
   y = addParagraph(
-    'Contamos con experiencia comprobada en múltiples industrias, ofreciendo soluciones especializadas para cada sector.',
+    'Contamos con experiencia comprobada en multiples industrias, ofreciendo soluciones especializadas para cada sector.',
     y
   );
 
   y += 15;
-  y = addHeader('Contáctanos', y, 18);
+  y = addHeader('Contactanos', y, 18);
 
   // Contact info
   doc.setFillColor(...darkBg);
@@ -328,22 +319,22 @@ export const generateSalesPDF = () => {
   doc.setTextColor(...white);
   doc.setFont('helvetica', 'normal');
   
-  doc.text('📞 Teléfono / WhatsApp:', 30, y + 18);
+  doc.text('Telefono / WhatsApp:', 30, y + 18);
   doc.setFont('helvetica', 'bold');
   doc.text('998 150 3949', 100, y + 18);
   
   doc.setFont('helvetica', 'normal');
-  doc.text('📧 Email:', 30, y + 32);
+  doc.text('Email:', 30, y + 32);
   doc.setFont('helvetica', 'bold');
   doc.text('info@hyperlink.com.mx', 100, y + 32);
   
   doc.setFont('helvetica', 'normal');
-  doc.text('📍 Ubicación:', 30, y + 46);
+  doc.text('Ubicacion:', 30, y + 46);
   doc.setFont('helvetica', 'bold');
-  doc.text('Cancún, Quintana Roo, México', 100, y + 46);
+  doc.text('Cancun, Quintana Roo, Mexico', 100, y + 46);
   
   doc.setFont('helvetica', 'normal');
-  doc.text('🌐 Web:', 30, y + 60);
+  doc.text('Web:', 30, y + 60);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...secondaryBlue);
   doc.text('hyperlink.lovable.app', 100, y + 60);
@@ -357,11 +348,11 @@ export const generateSalesPDF = () => {
   doc.setFontSize(16);
   doc.setTextColor(...white);
   doc.setFont('helvetica', 'bold');
-  doc.text('¡Transforma tu Infraestructura Hoy!', pageWidth / 2, y + 18, { align: 'center' });
+  doc.text('Transforma tu Infraestructura Hoy!', pageWidth / 2, y + 18, { align: 'center' });
   
   doc.setFontSize(11);
   doc.setFont('helvetica', 'italic');
-  doc.text('"Conectividad continua. Seguridad robusta. Gestión eficiente."', pageWidth / 2, y + 32, { align: 'center' });
+  doc.text('"Conectividad continua. Seguridad robusta. Gestion eficiente."', pageWidth / 2, y + 32, { align: 'center' });
 
   // Footer on all pages
   const totalPages = doc.getNumberOfPages();
@@ -369,9 +360,9 @@ export const generateSalesPDF = () => {
     doc.setPage(i);
     doc.setFontSize(8);
     doc.setTextColor(150, 150, 150);
-    doc.text(`Página ${i} de ${totalPages}`, pageWidth / 2, pageHeight - 10, { align: 'center' });
+    doc.text(`Pagina ${i} de ${totalPages}`, pageWidth / 2, pageHeight - 10, { align: 'center' });
     if (i > 1) {
-      doc.text('© Hyperlink Telecom - Todos los derechos reservados', pageWidth - 20, pageHeight - 10, { align: 'right' });
+      doc.text('Hyperlink Telecom - Todos los derechos reservados', pageWidth - 20, pageHeight - 10, { align: 'right' });
     }
   }
 
