@@ -17,14 +17,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Teléfono",
-    value: "998 150 3949",
-    href: "tel:9981503949",
+    value: "56 5639 1877",
+    href: "tel:5656391877",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    value: "998 150 3949",
-    href: "https://wa.me/529981503949",
+    value: "56 5639 1877",
+    href: "https://wa.me/525656391877",
   },
   {
     icon: Mail,

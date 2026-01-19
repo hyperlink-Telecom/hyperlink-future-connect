@@ -64,15 +64,15 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-4">
             <ThemeToggle />
             <a
-              href="tel:9981503949"
+              href="tel:5656391877"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>998 150 3949</span>
+              <span>56 5639 1877</span>
             </a>
             <Button variant="cta" size="lg" className="button-glow" asChild>
               <a
-                href="https://wa.me/529981503949?text=Hola,%20me%20gustaría%20solicitar%20una%20asesoría"
+                href="https://wa.me/525656391877?text=Hola,%20me%20gustaría%20solicitar%20una%20asesoría"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -133,7 +133,7 @@ const Header = () => {
               >
                 <Button variant="cta" size="lg" className="w-full button-glow" asChild>
                   <a
-                    href="https://wa.me/529981503949?text=Hola,%20me%20gustaría%20solicitar%20una%20asesoría"
+                    href="https://wa.me/525656391877?text=Hola,%20me%20gustaría%20solicitar%20una%20asesoría"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
